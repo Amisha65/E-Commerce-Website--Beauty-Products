@@ -1,0 +1,228 @@
+.bebold{
+    font-weight: 900;
+    font-size:  40px;
+    line-height: 0;
+    padding-top: 10px;
+}
+
+.store{
+    color:rgb(163, 110, 131);
+    font-weight: 400;
+    font-size:  18px;
+}
+
+.navbar-toggler {
+    position: absolute; 
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+.links a{font-weight: 400;
+    color:black;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.links a:hover{
+    color:rgb(199, 93, 163);
+}
+
+.login{
+    text-align: end;
+    font-size:17px
+}
+
+.login sup{
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    padding: 1px;
+}
+
+.heroImg {
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 83vh;
+    min-height: 600px;
+    background-color: #f4f4f4;
+}
+
+.heroImg .row {
+    padding-left: 85px;
+}
+
+.text p{
+    color:#f4f4f4;
+    font-family: serif;
+}
+
+#imgText2{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#imgText3{
+    font-size: 25px;
+}
+
+.heroImg button{
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    width:30%;
+}
+
+.heroImg button:hover{
+    color: rgb(199, 93, 163);
+}
+
+.heroImg button:active{
+    border:1px solid rgb(52, 51, 51);
+}
+
+.trandingNow img{
+    height: 80%;
+    width:100%;
+    padding-bottom: 15px;
+}
+
+.tranding1{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#tranding2{
+    font-size:50px;
+    font-weight: 600;
+    font-family: serif;
+}
+
+.imgText p{
+   margin-bottom: 5px;
+   font-size: larger;
+   font-weight: 500;
+}
+
+.imgText p span{
+    text-decoration: line-through;
+    padding-right: 7px;
+    font-weight: 50;
+}
+
+.sale-tag, .bag-icon {
+    position: absolute;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.sale-tag {
+    top: 10px;
+    left: 25px;
+}
+
+.bag-icon {
+    top: 10px;
+    right: 20px;
+    display: none; 
+}
+
+.imgText:hover .bag-icon {
+    display: block; 
+}
+
+.whyChoose p{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.whyChoose hr{
+    width: 100px; 
+    height: 2px; 
+    background-color:#e71d56;
+}
+
+.icons i{
+    background-color:rgb(199, 93, 163);
+    color:white;
+    border-radius: 50%;
+    font-size: 20;
+    padding:5%;
+    display: flex;
+    align-items: center;
+}
+
+.icons i:hover{
+    background-color:black;
+}
+
+.icons p{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.pIcon{
+    padding-left: 23%;
+}
+
+.mLine p{
+    font-size: 500;
+    font-weight: 400;
+}
+
+.footerBG{
+    background-color:#f6edf0;
+}
+
+.firstRow p{
+    font-size: 25px;
+    font-weight: 450;
+}
+
+.firstRow input{
+    border:1px solid #fadce6;
+    height: 100%;
+    width: 95%;
+    padding: 2%;
+}
+
+.firstRow input:focus{
+    border:none;
+    outline: none;
+}
+
+.firstRow button{
+    color: white;
+    font-size: 20px;
+    font-weight: 450;
+    background-color: black;
+    height: 100%;
+    width: 90%;
+    border: none;
+}
+
+.firstRow button:hover{
+    background-color: rgb(199, 93, 163);
+}
+
+.firstRow button:active{
+    border: 2px solid rgb(247, 237, 237);
+}
+
+.secondRow a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.secondRow a:hover{
+    color:rgb(199, 93, 163);
+}
+
