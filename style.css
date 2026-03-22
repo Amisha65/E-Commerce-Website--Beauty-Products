@@ -137,6 +137,8 @@ a {
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-left: auto;
+    transform: translateX(112px);
 }
 
 .nav-links a {
@@ -319,13 +321,13 @@ a {
 }
 
 .hero-card-main {
-    inset: 0 32px 90px 0;
-    transform: translateX(-24px);
+    inset: 0 0 90px 0;
 }
 
 .hero-card-main img {
     height: 100%;
     object-fit: cover;
+    object-position: 68% center;
 }
 
 .hero-card-floating {
@@ -335,6 +337,7 @@ a {
     background: rgba(45, 28, 36, 0.92);
     color: #fff;
     padding: 28px;
+    transform: translate(50%, 0);
 }
 
 .hero-card-floating .eyebrow,

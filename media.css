@@ -91,6 +91,7 @@
         width: calc(100% - 28px);
         right: 14px;
         left: 14px;
+        transform: translateX(0);
     }
 
     .two-column-form,
