@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Bold Beauty Store</title>
+    <meta name="description" content="Discover curated skincare, makeup, and haircare with personalized routines, fast delivery, and an elevated beauty shopping experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <div class="site-shell">
+        <header class="topbar">
+            <div class="announcement">
+                <p>Free delivery above $60 | Complimentary skin quiz with every routine</p>
+            </div>
+            <nav class="navbar shell-width">
+                <a href="#home" class="brand" aria-label="Be Bold home">
+                    <span class="brand-mark">Be Bold</span>
+                    <span class="brand-subtitle">Beauty Store</span>
+                </a>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation">
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-panel" id="site-menu">
+                    <div class="nav-links">
+                        <a href="#shop">Shop</a>
+                        <a href="#collections">Collections</a>
+                        <a href="#rituals">Rituals</a>
+                        <a href="#journal">Journal</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="nav-actions">
+                        <button class="ghost-button" type="button" data-scroll-target="#contact">Book a consult</button>
+                        <button class="cart-button" type="button" id="cartButton" aria-expanded="false" aria-controls="cartDrawer">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>Bag</span>
+                            <strong id="cartCount">0</strong>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero shell-width" id="home">
+                <div class="hero-copy">
+                    <p class="eyebrow">Curated for glow days</p>
+                    <h1><span class="nowrap">Modern Beauty</span> for your everyday glow.</h1>
+                    <p class="hero-text">Explore high-performing skincare, soft-focus makeup, and hair essentials paired with tailored routines from our in-house beauty advisors.</p>
+                    <div class="hero-cta">
+                        <button class="primary-button" type="button" data-scroll-target="#shop">Shop best sellers</button>
+                        <button class="secondary-button" type="button" data-scroll-target="#contact">Build my routine</button>
+                    </div>
+                    <div class="hero-metrics">
+                        <article>
+                            <strong>12k+</strong>
+                            <span>happy orders</span>
+                        </article>
+                        <article>
+                            <strong>48h</strong>
+                            <span>dispatch window</span>
+                        </article>
+                        <article>
+                            <strong>4.9/5</strong>
+                            <span>community rating</span>
+                        </article>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card hero-card-main">
+                        <img src="images/hero.jpg" alt="Luxury beauty arrangement with skincare and makeup">
+                    </div>
+                    <div class="hero-card hero-card-floating">
+                        <p class="eyebrow">This week</p>
+                        <h2>Glass Skin Edit</h2>
+                        <p>Hydrating serum, velvet tint, and repair balm bundled with 15% off.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="benefits shell-width" id="collections">
+                <article>
+                    <i class="fa-solid fa-sparkles"></i>
+                    <h3>Curated edits</h3>
+                    <p>Every collection is grouped by finish, skin concern, and occasion so shopping feels intuitive.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>Fast dispatch</h3>
+                    <p>Orders placed before noon are prepared the same day with elegant gift-ready packaging.</p>
+                </article>
+                <article>
+                    <i class="fa-solid fa-comments"></i>
+                    <h3>Expert guidance</h3>
+                    <p>Send us your skin goals and get a practical routine recommendation from our beauty desk.</p>
+                </article>
+            </section>
+
+            <section class="shop shell-width" id="shop">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Interactive storefront</p>
+                        <h2>Shop the current obsessions</h2>
+                    </div>
+                    <p class="section-copy">Products are loaded from a backend API, filtered instantly on the page, and can be saved to your bag without leaving the experience.</p>
+                </div>
+                <div class="shop-toolbar">
+                    <div class="filter-pills" id="filterPills" aria-label="Filter products by category"></div>
+                    <label class="search-field">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="searchInput" placeholder="Search serum, tint, balm...">
+                    </label>
+                </div>
+                <div class="product-grid" id="productGrid" aria-live="polite"></div>
+                <p class="empty-state hidden" id="emptyState">No products match this filter yet. Try another category or search term.</p>
+            </section>
+
+            <section class="story-band">
+                <div class="shell-width story-grid">
+                    <article class="story-copy" id="rituals">
+                        <p class="eyebrow">Signature routines</p>
+                        <h2>Layered rituals for bright mornings and soft evenings.</h2>
+                        <p>We grouped our hero products into routines that remove the guesswork: hydrate, tint, finish, and protect. Each ritual balances performance with ease so it fits into actual daily life.</p>
+                        <ul class="ritual-list">
+                            <li>Morning glow routine with SPF-friendly texture</li>
+                            <li>Night repair ritual with barrier support</li>
+                            <li>Minimal makeup set for quick polished looks</li>
+                        </ul>
+                    </article>
+                    <article class="spotlight-card">
+                        <img src="images/first.jpg" alt="Beauty routine flat lay with premium products">
+                        <div class="spotlight-overlay">
+                            <span class="eyebrow">Editor pick</span>
+                            <h3>Soft Matte Recovery Set</h3>
+                            <p>Perfect for combination skin that wants coverage without heaviness.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="journal shell-width" id="journal">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Beauty notes</p>
+                        <h2>Why customers keep coming back</h2>
+                    </div>
+                </div>
+                <div class="journal-grid">
+                    <article class="journal-card">
+                        <span>01</span>
+                        <h3>Makeup that behaves like skincare</h3>
+                        <p>Lightweight base products with barrier-friendly ingredients make everyday wear more comfortable.</p>
+                    </article>
+                    <article class="journal-card">
+                        <span>02</span>
+                        <h3>Fewer products, sharper routines</h3>
+                        <p>Instead of oversized catalogs, we focus on tested combinations that cover the essentials beautifully.</p>
+                    </article>
+                    <article class="journal-card">
+                        <span>03</span>
+                        <h3>Personalized help without the pressure</h3>
+                        <p>Our consultation form gives shoppers a fast, structured way to get recommendations from the team.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="contact shell-width" id="contact">
+                <div class="contact-card newsletter-card">
+                    <p class="eyebrow">Members list</p>
+                    <h2>Join for launches, private offers, and routine tips.</h2>
+                    <p>We’ll send thoughtful drops, not inbox clutter.</p>
+                    <form id="newsletterForm" class="stack-form">
+                        <label>
+                            <span>Email address</span>
+                            <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+                        </label>
+                        <button class="primary-button" type="submit">Subscribe now</button>
+                        <p class="form-feedback" id="newsletterFeedback" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div class="contact-card consult-card">
+                    <p class="eyebrow">Beauty desk</p>
+                    <h2>Request a custom routine</h2>
+                    <form id="consultForm" class="stack-form two-column-form">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name" placeholder="Your name" required>
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" placeholder="you@example.com" required>
+                        </label>
+                        <label>
+                            <span>Focus area</span>
+                            <select name="interest" required>
+                                <option value="">Choose one</option>
+                                <option value="hydration">Hydration</option>
+                                <option value="acne support">Acne support</option>
+                                <option value="soft glam makeup">Soft glam makeup</option>
+                                <option value="hair repair">Hair repair</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>Budget</span>
+                            <input type="text" name="budget" placeholder="$60-$120">
+                        </label>
+                        <label class="full-width">
+                            <span>Tell us about your goals</span>
+                            <textarea name="message" rows="5" placeholder="Skin type, occasion, current routine, or anything else helpful." required></textarea>
+                        </label>
+                        <button class="primary-button full-width" type="submit">Send request</button>
+                        <p class="form-feedback full-width" id="consultFeedback" aria-live="polite"></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="shell-width footer-grid">
+                <div>
+                    <a href="#home" class="brand footer-brand">
+                        <span class="brand-mark">Be Bold</span>
+                        <span class="brand-subtitle">Beauty Store</span>
+                    </a>
+                    <p class="footer-copy">A responsive beauty storefront with dynamic product loading, client-side cart behavior, and serverless backend endpoints ready for Vercel.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#shop">Shop</a>
+                    <a href="#collections">Collections</a>
+                    <a href="#rituals">Rituals</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <p class="eyebrow">Your bag</p>
+                <h2>Selected products</h2>
+            </div>
+            <button class="icon-button" type="button" id="closeCart" aria-label="Close bag">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-summary">
+            <div>
+                <span>Estimated total</span>
+                <strong id="cartTotal">$0.00</strong>
+            </div>
+            <p>Taxes and shipping are calculated at checkout.</p>
+        </div>
+    </aside>
+    <div class="backdrop" id="pageBackdrop" hidden></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

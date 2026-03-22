@@ -1,0 +1,155 @@
+@media (max-width: 1100px) {
+    .hero,
+    .story-grid,
+    .contact,
+    .footer-grid,
+    .section-heading,
+    .shop-toolbar {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero {
+        gap: 28px;
+    }
+
+    .hero-visual {
+        min-height: 520px;
+    }
+
+    .product-grid,
+    .journal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links,
+    .footer-socials {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 860px) {
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .nav-panel {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 16px;
+        right: 16px;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 18px;
+        border-radius: 24px;
+        background: rgba(255, 251, 249, 0.98);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 10;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .nav-panel.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-links,
+    .nav-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-actions .ghost-button,
+    .nav-actions .cart-button {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        max-width: none;
+    }
+
+    .hero-card-main {
+        inset: 0 0 88px 0;
+        transform: translateX(-12px);
+    }
+
+    .hero-card-floating {
+        width: calc(100% - 28px);
+        right: 14px;
+        left: 14px;
+    }
+
+    .two-column-form,
+    .product-grid,
+    .journal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-metrics {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --shell: min(100% - 20px, 1180px);
+    }
+
+    .announcement {
+        font-size: 0.82rem;
+    }
+
+    .navbar {
+        padding-top: 18px;
+    }
+
+    .hero,
+    .shop,
+    .journal,
+    .contact {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    .benefits {
+        padding-top: 0;
+    }
+
+    .hero-visual {
+        min-height: 420px;
+    }
+
+    .hero-card-floating,
+    .story-copy,
+    .contact-card,
+    .benefits article,
+    .journal-card {
+        padding: 22px;
+    }
+
+    .search-field {
+        min-width: 100%;
+    }
+
+    .cart-drawer {
+        padding: 20px;
+    }
+
+    .footer-grid {
+        padding: 24px;
+    }
+}
